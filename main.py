@@ -301,3 +301,75 @@
 # DELETING FACTS FROM MongoDB
 # myquery = { "name": "John" }
 # mycollection.delete_one(myquery)
+
+
+#*************************************
+
+# ADDITIONAL PYTHON LIBRARIES
+
+
+# NumPy - PYTHON LIBRARY FOR WORKING WITH ARRAYS
+# IT ALSO HAS FUNCTIONS FOR WORKING IN DOMAIN OF LINEAR ALGEBRA, FOURIER TRANSFORM, AND MATRIX OPERATIONS
+
+# ARRAYS VS LISTS - PYTHON GENERALLY USES LISTS AND DOESNT HAVE ARRAYS NumPy GIVES ACCESS TO ARRAYS
+# ARRAYS ARE FASTER THAN LISTS FOR SOME ALGORITHMS
+# NumPy AIMS TO PROVIDE AN ARRAY OBJECT THAT IS UP TO 50X FASTER THAN TRADITIONAL PYTHON LISTS
+# python -m pip install numpy
+
+# import numpy
+# arr = numpy.array([1, 2, 3, 4, 5])
+# print(arr)
+
+
+
+# Pandas - PYTHON LIBRARY FOR DATA ANALYSIS FOR DATA SETS
+# IT HAS FUNCTIONS FOR DATA ANALYZING, CLEANING, EXPLORING, AND MANIPULATING DATA
+# USE Pandas FOR:
+# CHECKING FOR CORRELATION BETWEEN TWO OR MORE COLUMNS OF DATA
+# AVERAGE VALUE
+# MAXIMUM VALUE
+# MINIMUM VALUE
+# ETC
+# python -m pip install pandas
+
+import pandas
+mydataset = {
+    'people': ['John', 'Jane', 'Bob', 'Mary'],
+    'passings': [10, 12, 14, 16]
+}
+myvar = pandas.DataFrame(mydataset)
+print(myvar)
+# DataFrame IS A 2-DIMENSIONAL DATA STRUCTURE WITH ROWS AND COLUMNS
+# LOCATE ROWS
+# INDEX COLUMNS
+# RETRIEVE N NUMBER OF ROWS FROM Head
+# RETRIEVE N NUMBER OF ROWS FROM Tail
+# RETRIEVE AGGREGATE INFORMATION
+# CLEAN DATA
+# FIND CORRELATIONS
+# PLOT DATA
+
+
+
+# Matplotlib - LOW LEVEL GRAPH PLOTTING LIBRARY IN PYTHON THAT SERVES AS A VISUALIZATION UTILITY
+# IT HAS FUNCTIONS FOR PLOTTING LINE GRAPHS, BAR GRAPHS, SCATTER PLOTS, AND HISTOGRAMS
+# python -m pip install matplotlib
+
+# import matplotlib.pyplot
+# import numpy
+
+# xpoints = numpy.array([0, 6])
+# ypoints = numpy.array([0, 250])
+
+# matplotlib.pyplot.plot(xpoints, ypoints)
+# matplotlib.pyplot.show()
+
+# MANY PLOT TYPES AVAILABLE:
+# LINE GRAPH
+# BAR GRAPH
+# SCATTER PLOT
+# HISTOGRAM
+# PIE CHARTS
+
+
+
