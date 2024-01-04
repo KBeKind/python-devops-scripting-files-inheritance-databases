@@ -209,3 +209,95 @@
 
 
 # print(person1 == person2)
+
+
+#*************************************
+
+
+# DATABASES WITH PYTHON
+# SQL or NOSQL - MYSQL VS MONGO  ETC
+
+# import mysql.connector
+
+# mydb = mysql.connector.connect(
+#     host="localhost",
+#     user="yourusername",
+#     password="yourpassword",
+# )
+
+# EXAMPLE 1: RETRIEVE NAME, PHONE, AND EMAIL FOR CUSTOMERS IN A SPECIFIC ZIPCODE
+# SELECT name, phone, email FROM customers WHERE zipcode = '02176'
+
+# mycursor = mydb.cursor()
+
+# mycursor.execute("SELECT name, phone, email FROM customers WHERE zipcode = '02176'")
+
+# myresult = mycursor.fetchall()
+
+# for x in myresult:
+#     print(x)
+
+
+# EXAMPLE 2:
+# MongoDB STORES DOCUMENTS IN COLLECTIONS.  COLLECTIONS ARE LIKE TABLES IN SQL.
+# IT IS KEY VALUE PARS KIND OF LIKE OBJECTS OR JSON ALSO
+# SAMPLE
+    # {
+    #     name: "John",
+    #     address: "46 Upland Rd",
+    #     city: "Boston",
+    #     state: "MA",
+    #     zipcode: "02176"
+    # }
+
+# WILL GET EVERYONE WITH THE NAME 'John'
+# mycollection = mydb["Friends"]
+# myquery = { "name": "John" }
+# mydoc = mycollection.find(myquery)
+# for x in mydoc:
+#     print(x)
+
+
+#*************************************
+
+# DATABASES CONTINUED
+
+# INSERTING FACTS INTO MySQL
+
+# mycursor = mydb.cursor()
+# sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
+# value = ("John", "162 Highway 21")
+# mycursor.execute(sql, value)
+# mydb.commit()
+
+# UPDATING FACTS IN MySQL
+# mycursor = mydb.cursor()
+# DID A DIFFERENT UPDATE FORMAT STYLE THAN THE PREVIOUS INSERT
+# sql = "UPDATE customers SET address = '162 Highway 21' WHERE name = 'John'"
+# mycursor.execute(sql)
+# mydb.commit()
+
+# DELETING FACTS FROM MySQL
+# mycursor = mydb.cursor()
+# sql = "DELETE FROM customers WHERE name = 'John'"
+# mycursor.execute(sql)
+# mydb.commit()
+
+
+#*************************************
+
+# DATABASES CONTINUED
+
+# INSERTING FACTS INTO MongoDB
+
+# mydictionary = {"name": "John", "address": "162 Highway 21"}
+# x = mycollection.insert_one(mydictionary)
+
+# UPDATING FACTS IN MongoDB
+# myquery = { "name": "John" }
+# newValues = { "$set": { "address": "162 Highway 21" } }
+# mycollection.update_one(myquery, newValues)
+
+# DELETING FACTS FROM MongoDB
+# myquery = { "name": "John" }
+# mycollection.delete_one(myquery)
